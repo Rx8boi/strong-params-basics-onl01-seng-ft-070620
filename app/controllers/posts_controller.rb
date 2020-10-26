@@ -27,3 +27,8 @@ end
 	  @post = Post.find(params[:id])
 	end
 end
+
+private
+def post_params
+  params.require(:post).permit(:title, :description)
+end
